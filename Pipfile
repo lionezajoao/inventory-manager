@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+dotenv = "*"
+jinja2 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+
+[scripts]
+app = "python -m uvicorn app.main:app --host=0.0.0.0 --port=8000 --env-file=.env"
+dev = "python -m uvicorn app.main:app --host=localhost --port=8000 --reload --env-file=.env"

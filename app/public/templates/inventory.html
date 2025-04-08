@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Manager</title>
+    <link rel="stylesheet" href="/static/inventory.css">
+</head>
+<body>
+    <h1>Inventory Manager</h1>
+    <div>
+        <h2>Add Item</h2>
+        <div class="form-group">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName">
+        </div>
+        <div class="form-group">
+            <label for="itemQuantity">Quantity:</label>
+            <input type="number" id="itemQuantity">
+        </div>
+        <button onclick="addItem()">Add Item</button>
+    </div>
+    
+    <div>
+        <h2>Inventory List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryTable">
+                <!-- Items will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/inventory.js"></script>
+</body>
+</html>
